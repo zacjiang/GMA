@@ -18,4 +18,5 @@ WTFPL. See [LICENSE](LICENSE) file.
 
 ## Acknowledgement
 The overall code framework is adapted from [RAFT](https://github.com/princeton-vl/RAFT). We
-thank the authors for the contribution. 
+thank the authors for the contribution. We also thank [Phil Wang](https://github.com/lucidrains)
+for open-sourcing transformer implementations. 
