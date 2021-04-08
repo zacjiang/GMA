@@ -1,4 +1,9 @@
-# Learning to Estimate Hidden Motions with Global Motion Aggregationn (GMA)
+# Learning to Estimate Hidden Motions with Global Motion Aggregation (GMA)
+This repository contains the source code for our paper:
+
+[Learning to Estimate Hidden Motions with Global Motion Aggregation](https://arxiv.org/abs/2104.02409)<br/>
+**Shihao Jiang**, Dylan Campbell, Yao Lu, Hongdong Li, Richard Hartley<br/>
+
 
 ## Environments
 You will have to choose cudatoolkit version to match your compute environment. 
