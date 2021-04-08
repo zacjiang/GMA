@@ -18,6 +18,13 @@ pip install matplotlib imageio einops scipy opencv-python
 ```Shell
 sh demo.sh
 ```
+## Train
+```Shell
+sh train.sh
+```
+
+## Evaluate
+
 ## License
 WTFPL. See [LICENSE](LICENSE) file. 
 

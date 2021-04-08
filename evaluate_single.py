@@ -82,6 +82,10 @@ if __name__ == '__main__':
     parser.add_argument('--path', help="dataset for evaluation")
     parser.add_argument('--num_heads', default=1, type=int,
                         help='number of heads in attention and aggregation')
+    parser.add_argument('--position_only', default=False, action='store_true',
+                        help='only use position-wise attention')
+    parser.add_argument('--position_and_content', default=False, action='store_true',
+                        help='use position and content-wise attention')
     parser.add_argument('--mixed_precision', action='store_true', help='use mixed precision')
     args = parser.parse_args()
 

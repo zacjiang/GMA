@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+python train.py --name gma-chairs --stage chairs --validation chairs --output results/chairs/gma --num_steps 120000 --lr 0.00025 --image_size 368 496 --wdecay 0.0001 --gpus 0 1 --batch_size 8 --val_freq 10000 --print_freq 100 --mixed_precision
+python train.py --name gma-things --stage things --validation sintel --output results/things/gma --restore_ckpt results/chairs/gma/gma-chairs.pth --num_steps 120000 --lr 0.000125 --image_size 400 720 --wdecay 0.0001 --gpus 0 1 --batch_size 6 --val_freq 10000 --print_freq 100 --mixed_precision
+python train.py --name gma-sintel --stage sintel --validation sintel --output results/sintel/gma --restore_ckpt results/things/gma/gma-things.pth --num_steps 120000 --lr 0.000125 --image_size 368 768 --wdecay 0.00001 --gamma 0.85 --gpus 0 1 --batch_size 6 --val_freq 10000 --print_freq 100 --mixed_precision
+python train.py --name gma-kitti --stage kitti --validation kitti --output results/kitti/gma --restore_ckpt results/sintel/gma/gma-sintel.pth --num_steps 50000 --lr 0.000125 --image_size 288 960 --wdecay 0.00001 --gamma 0.85 --gpus 0 1 --batch_size 6 --val_freq 10000 --print_freq 100 --mixed_precision

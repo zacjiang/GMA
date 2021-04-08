@@ -58,7 +58,17 @@ class Attention(nn.Module):
 
         q, k = map(lambda t: rearrange(t, 'b (h d) x y -> b h x y d', h=heads), (q, k))
         q = self.scale * q
-        sim = einsum('b h x y d, b h u v d -> b h x y u v', q, k)
+
+        if self.args.position_only:
+            sim = self.pos_emb(q)
+
+        elif self.args.position_and_content:
+            sim_content = einsum('b h x y d, b h u v d -> b h x y u v', q, k)
+            sim_pos = self.pos_emb(q)
+            sim = sim_content + sim_pos
+
+        else:
+            sim = einsum('b h x y d, b h u v d -> b h x y u v', q, k)
 
         sim = rearrange(sim, 'b h x y u v -> b h (x y) (u v)')
         attn = sim.softmax(dim=-1)
