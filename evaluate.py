@@ -394,10 +394,10 @@ if __name__ == '__main__':
                         help='maximum search range for hypotheses in quarter resolution')
     parser.add_argument('--num_heads', default=1, type=int,
                         help='number of heads in attention and aggregation')
-    parser.add_argument('--content_only', default=False, action='store_true',
-                        help='only use content-wise attention')
     parser.add_argument('--position_only', default=False, action='store_true',
                         help='only use position-wise attention')
+    parser.add_argument('--position_and_content', default=False, action='store_true',
+                        help='use position and content-wise attention')
     parser.add_argument('--mixed_precision', default=True, help='use mixed precision')
     parser.add_argument('--model_name')
 

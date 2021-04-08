@@ -22,9 +22,10 @@ sh demo.sh
 ```Shell
 sh train.sh
 ```
-
 ## Evaluate
-
+```Shell
+sh evaluate.sh
+```
 ## License
 WTFPL. See [LICENSE](LICENSE) file. 
 
