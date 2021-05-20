@@ -172,7 +172,7 @@ def validate_chairs(model, iters=6):
 
 @torch.no_grad()
 def validate_things(model, iters=6):
-    """ Perform evaluation on the FlyingChairs (test) split """
+    """ Perform evaluation on the FlyingThings (test) split """
     model.eval()
     results = {}
 
@@ -388,10 +388,6 @@ if __name__ == '__main__':
     parser.add_argument('--model', help="restore checkpoint")
     parser.add_argument('--dataset', help="dataset for evaluation")
     parser.add_argument('--iters', type=int, default=12)
-    parser.add_argument('--num_k', type=int, default=32,
-                        help='number of hypotheses to compute for knn Faiss')
-    parser.add_argument('--max_search_range', type=int, default=100,
-                        help='maximum search range for hypotheses in quarter resolution')
     parser.add_argument('--num_heads', default=1, type=int,
                         help='number of heads in attention and aggregation')
     parser.add_argument('--position_only', default=False, action='store_true',
