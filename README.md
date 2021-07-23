@@ -2,6 +2,7 @@
 This repository contains the source code for our paper:
 
 [Learning to Estimate Hidden Motions with Global Motion Aggregation](https://arxiv.org/abs/2104.02409)<br/>
+ICCV 2021 <br/>
 **Shihao Jiang**, Dylan Campbell, Yao Lu, Hongdong Li, Richard Hartley<br/>
 ANU, Oxford<br/>
 
