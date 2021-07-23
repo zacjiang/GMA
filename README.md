@@ -1,4 +1,4 @@
-# Learning to Estimate Hidden Motions with Global Motion Aggregation (GMA)
+# Learning to Estimate Hidden Motions with Global Motion Aggregation
 This repository contains the source code for our paper:
 
 [Learning to Estimate Hidden Motions with Global Motion Aggregation](https://arxiv.org/abs/2104.02409)<br/>
